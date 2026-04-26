@@ -1,9 +1,16 @@
 package czas.herbate.repository;
 
 import czas.herbate.domain.Member;
+import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
+/**
+ * @Repository: A Spring Bean annotation for the data access layer.
+ * By adding this, Spring automatically registers this class as a "Bean" in the IoC Container.
+ * It also translates database-specific exceptions into Spring's DataAccessException.
+ */
+@Repository
 public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>(); // currently not considering concurrency issues

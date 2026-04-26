@@ -1,5 +1,10 @@
 package czas.herbate.domain;
 
+/**
+ * Domain (Entity): Represents the data object used within the application.
+ * This class maps to the data structure (like a database table) and carries information 
+ * between different layers (Controller, Service, Repository).
+ */
 public class Member {
     private Long id;
     private String name;
