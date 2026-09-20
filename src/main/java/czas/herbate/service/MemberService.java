@@ -2,6 +2,7 @@ package czas.herbate.service;
 
 import czas.herbate.domain.Member;
 import czas.herbate.repository.MemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,6 +16,7 @@ import java.util.Optional;
  * DI (Dependency Injection): Spring "injects" the required dependency (MemberRepository) 
  * into the service when it creates the bean.
  */
+@Transactional
 public class MemberService {
 
     private final MemberRepository memberRepository;
