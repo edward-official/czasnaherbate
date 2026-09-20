@@ -1,6 +1,7 @@
 package czas.herbate;
 
 import czas.herbate.repository.JdbcMemberRepository;
+import czas.herbate.repository.JdbcTemplateMemberRepository;
 import czas.herbate.repository.MemberRepository;
 import czas.herbate.service.MemberService;
 import org.springframework.context.annotation.Bean;
@@ -25,6 +26,7 @@ public class SpringConfig {
     @Bean
     public MemberRepository memberRepository() {
         // return new MemoryMemberRepository();
-        return new JdbcMemberRepository(dataSource);
+        // return new JdbcMemberRepository(dataSource);
+        return new JdbcTemplateMemberRepository(dataSource);
     }
 }
